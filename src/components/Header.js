@@ -47,7 +47,7 @@ const Header = () => {
         <div className="rounded-full border flex items-center justify-center overflow-hidden px-1">
           <img src={DP} alt="" className="w-[20px] md:w-[30px]" />
         </div>
-        <button className="bg-pink-500 px-3 py-1 rounded-md hidden md:flex">
+        <button className="bg-pink-500 px-3 py-1 rounded-md hidden md:flex text-white">
           Upload
         </button>
         <div
