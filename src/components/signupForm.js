@@ -1,11 +1,18 @@
 import React from "react";
 import logo from "../assets/logo.png";
 import sideImg from "../assets/signupSide.png";
+import { useNavigate } from "react-router-dom";
 
 const SignupForm = () => {
+  const navigate = useNavigate();
+
+  const handleSignup = () => {
+    navigate("/createProfile");
+  };
+
   return (
     <div className="w-full h-screen flex">
-      <section className=" h-full bg-yellow-300 md:min-w-[400px] hidden md:flex flex-col px-8">
+      <section className=" h-full bg-yellow-300 md:min-w-[400px] hidden md:flex flex-col justify-between px-8">
         <div>
           <img src={logo} alt="#" width={100} />
           <h2 className="font-bold text-xl text-orange-800 ">
@@ -14,9 +21,9 @@ const SignupForm = () => {
           </h2>
         </div>
 
-        <div className="mt-[60px]">
+        <div className="mb-[60px]">
           <img src={sideImg} alt="#" width={400} />
-          <p className="text-sm mt-[20px]">
+          <p className="text-sm mt-[20px] text-orange-800">
             Art by <span>Mohit Darji</span>
           </p>
         </div>
@@ -85,12 +92,15 @@ const SignupForm = () => {
                 </p>
               </div>
               <div className="py-2">
-                <button className="bg-pink-500 text-white px-5 py-1 rounded-md">
+                <button
+                  className="bg-pink-500 text-white px-5 py-1 rounded-md"
+                  onClick={handleSignup}
+                >
                   Create Account
                 </button>
               </div>
             </form>
-            <p className="text-xs py-2 mt-2 text-black/60">
+            <p className="text-xs py-2 mt-2 text-gray-600">
               This site is protected by reCAPTCHA and the Google <br />
               <span className="text-purple-800 font-bold">
                 Privacy Policy
